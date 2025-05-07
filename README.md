@@ -94,3 +94,13 @@ be implemented by an OEM.
 
 Vehicle data capabilities are dependent on the configuration of a
 vehicle. We are not defining any vehicle requirement.
+
+
+## Examples
+
+### ACEA Level A1
+
+The mapping of the ACEA proposal for a predefined data list, Level A1,
+to VSS builds upon the work on [Issue
+#180](https://github.com/COVESA/vehicle_signal_specification/issues/180)
+in the COVESA `vehicle_signal_specification` GitHub repository.
