@@ -1,0 +1,106 @@
+Data Point / Feature	VSS	Primary Use Case 	Recommended Sampling
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Real time asset tracking - Ensure timely arrivals and departures - Ensure efficient number of stops - Route Optimization - Understand and improve asset utilization	1Hz
+Heartbeat (vehicle data or a notification of health while ignition is off)	N/A? - bring to VSS Expert Group or choose an arbitrary data point such as VIN as response 	- Ensure assets are connected	1.1574074074074E-5Hz
+Ignition status	Vehicle.LowVoltageSystemState	- Reduce inefficiencies by detecting idling	CHANGE
+Door Status (FL, FR, RL, RR, Cargo, other doors)	Vehicle.Cabin.Door.*.*.{IsLocked,isOpen}	- Shared mobility:     - Reduce costs and inefficiencies     - Improved utilization of assets     - Protect your assets	CHANGE
+VIN	Vehicle.VehicleIdentification.VIN	- Ensure assets are identified correctly	Vehicle.LowVoltageSystemState='START'
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Inventory management (detect & manage vehicle within zones)	1Hz
+Odometer	Vehicle.TraveledDistance	- Setup maintenance reminders based on distance	Vehicle.LowVoltageSystemState='START'
+Distance to service	Vehicle.Service.DistanceToService	- Setup maintenance reminders based on distance	Vehicle.LowVoltageSystemState='START'
+Battery voltage	Vehicle.LowVoltageBattery.CurrentVoltage	- Detect and manage battery drain issues	0.033333333333333Hz
+Faults / DTCs / Warnings	**only in OBD.vspec which is slated to be deprecated, agreement to provide DTC in tree	- Detect issues early to prevent downtime or major breakdowns	CHANGE
+Engine Warning Light	Vehicle.OBD.Status.IsMILOn	- Detect issues early to prevent downtime or major breakdowns	Vehicle.OBD.Status.IsMILOn=true
+High Engine Temp warning		- Detect issues early to prevent downtime or major breakdowns	
+Oil pressure warning		- Detect issues early to prevent downtime or major breakdowns	
+Tire Pressure	Vehicle.Chassis.Axle.Row{n}.Wheel.{Left, Right}.Tire.Pressure	- Detect and manage low / high tire pressure situations	0.0033333333333333Hz
+Engine oil pressure	Vehicle.Powertrain.CombustionEngine.EOP	- Ensure appropriate engine oil pressure to prevent engine damage	0.0033333333333333Hz
+Engine speed (rpm)	Vehicle.Powertrain.CombusitionEngine.Speed	- Prevent vehicle wear and tear from over-revving	0.033333333333333Hz
+Oil life remaining	Vehicle.Powertrain.CombusitionEngine.OilLifeRemaining	- Detect low oil life & scheduling maintenance	Vehicle.LowVoltageSystemState='START'
+Oil level	Vehicle.Powertrain.CombustionEngine.EngineOilLevel	- Detect low oil level & scheduling maintenance	Vehicle.LowVoltageSystemState='START'
+Engine hours	Vehicle.Powertrain.CombustionEngine.EngineHours	- Setup maintenance reminders based on engine hours	Vehicle.LowVoltageSystemState='START'
+Time to service / oil change / transmission oil change	Vehicle.Service.IsServiceDue	- Setup maintenance reminders based on engine hours	Vehicle.Service.IsServiceDue=true
+Total engine idle time	Vehicle.Powertrain.CombustionEngine.IdleHours	- Reduce time of asset used under idling situations	Vehicle.LowVoltageSystemState='START'
+Engine Coolant Temp	Vehicle.Powertrain.CombustionEngine.ECT	- Detect and manage abnormal temp events	0.0033333333333333Hz
+Battery Temp	Vehicle.Powertrain.TractionBattery.Temperature	- Detect and manage abnormal temp events	0.0033333333333333Hz
+Coolant Level	Vehicle.Powertrain.CombustionEngine.EngineCoolant.Level	- Detect and manage abnormal coolant levels	0.0033333333333333Hz
+DEF Level / Adblue	Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.Level	- Detect and manage abnormal DEF levels	0.0033333333333333Hz
+Cranking Voltage	Vehicle.LowVoltageBattery.CurrentVoltage when Vehicle.LowVoltageSystemState='START'	- Predictive maintenance by detecting electrical system health	100Hz* conditional logic, repeat for 5 seconds after Vehicle.LowVoltageSystemState='START'
+Battery voltage	Vehicle.LowVoltageBattery.CurrentVoltage	- Predictive maintenance by detecting electrical system health	0.033333333333333Hz
+Headlight, Tail light, Turn signal light, Hazard light, windshield wipers	Vehicle.Body.Lights.*.IsDefect Vehicle.Body.Windshield.Front.Wiping.System.IsBlocked Vehicle.Body.Windshield.Front.Wiping.System.IsOverheated Vehicle.Body.Windshield.Front.Wiping.System.IsWiperError	- Vehicle light and wiper health status	Vehicle.LowVoltageSystemState='START'
+Ignition status	Vehicle.LowVoltageSystemState	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	CHANGE
+Road speed	Vehicle.Speed	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	0.066666666666667 Hz
+Odometer	Vehicle.TraveledDistance	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	Vehicle.LowVoltageSystemState='START'
+Engine hours	Vehicle.Powertrain.CombustionEngine.EngineHours	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	Vehicle.LowVoltageSystemState='START'
+Device power status	NA in VSS	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	
+Device memory status	NA in VSS	- Reduce the risk of HOS (ELD) violations and errors - Gain peace of mind with Hours of Service visibility	
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- IFTA report	1Hz
+Odometer	Vehicle.TraveledDistance	- IFTA report	Vehicle.LowVoltageSystemState='START'
+Parking Brake	Vehicle.Chassis.ParkingBreak.IsEngaged	- Ensure compliance in jurisdictions which require that parking brake be applied in certain situations	Vehicle.LowVoltageSystemState='START'
+Driver Seat Belt	Vehicle.Cabin.Seat.Row1.DriverSide.IsBelted	- Increase seatbelt use	CHANGE
+Forward and backward acceleration	Vehicle.Acceleration.Longitudial	- Reduce harsh braking and acceleration	1Hz
+Impact Status / Airbag Deployed status / Accident detection	Vehicle.Cabin.Seat.Row{1,2}.{DriverSide, Middle, PassengerSide}.AirbagIsDeployed	- Detect accident events remotely	CHANGE
+Accident reconstruction data (granular acceleration and GPS data before and after accident)	is this applicable to VSS?	- Reduce accidents via accurate understanding of accident events	
+Brake pedal status	Vehicle.Chassis.Brake.PedalPosition	- Reduce accidents via accurate understanding of accident events	CHANGE
+Cruise control status	Vehicle.ADAS.CruiseControl.IsActive, Vehicle.ADAS.CruiseControl.IsError, Vehicle.ADAS.CruiseControl.SpeedSet	- Reduce accidents via accurate understanding of accident events	CHANGE
+Side to side acceleration	Vehicle.Acceleration.Lateral	- Reduce harsh cornering	1Hz
+Passenger occupancy	Vehicle.Cabin.Row{1,2}.{DriverSide, Middle, PassengerSide}.IsOccupied	- Increase seatbelt use for passengers	CHANGE
+Passenger seatbelt	Vehicle.Cabin.Row{1,2}.{DriverSide, Middle, PassengerSide}.IsBelted	- Increase seatbelt use for passengers	CHANGE
+Gear position	Vehicle.Powertrain.Transmission.CurrentGear	- Reduce backing while leaving	CHANGE
+Road speed	Vehicle.Speed	- Reduce Speeding	0.066666666666667 Hz
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Understand location of safety events	5Hz
+Road speed	Vehicle.Speed	- Understand speed during safety events	0.066666666666667 Hz
+Ignition status	Vehicle.LowVoltageSystemState	- Detect asset usage out of office hours	CHANGE
+Parking Brake	Vehicle.Chassis.ParkingBreak.IsEngaged	- Reduce rollaway risk	Vehicle.LowVoltageSystemState='START'
+Anti-lock brake system (ABS) status	Vehicle.ADAS.ABS.IsEngaged, Vehicle.ADAS.ABS.IsEnabled	- Detect near accident events for safety coaching and improvements	CHANGE
+Distance to forward vehicle		- Detect near accident events for safety coaching and improvements (following distance)	3 seconds
+Lane departure status	Vehicle.ADAS.LaneDepartureDetection.IsWarning	- Detect near accident events for safety coaching and improvements	CHANGE
+Automatic / emergency / collision mitigation brake status	Vehicle.ADAS.EBA.IsEngaged	- Detect near accident events for safety coaching and improvements	CHANGE
+Obstacle warning status	Vehicle.ADAS.ObstacleDetection.IsWarning	- Detect near accident events for safety coaching and improvements	CHANGE
+Traction Control system status	Vehicle.ADAS.TCS.IsEngaged	- Detect near accident events for safety coaching and improvements	CHANGE
+Engine speed (rpm)	Vehicle.Powertrain.CombusitionEngine.Speed	- Reduce over-revving events	0.033333333333333Hz
+Engine oil pressure	Vehicle.Powertrain.CombustionEngine.EOP	- Reduce accidents by detecting abnormal values of key engine metrics	0.0033333333333333Hz
+Airbag module health Seatbelt health Parking brake health	Airbag only has isDeployed no health check, same with seatbelt and parking brake - whether in use, no error checking	- Ensure key vehicle safety modules / features are working	
+Fuel type	Vehicle.OBD.FuelType	- Increase fuel efficiency - Monitor fuel used	Vehicle.LowVoltageSystemState='START'
+Fuel level remaining (percentage)	Vehicle.Powertrain.FuelSystem.Level	- Increase fuel efficiency - Monitor fuel used	0.0083333333333333Hz
+Fuel volume remaining (L)	Vehicle.Powertrain.FuelSystem.Remaining	- Increase fuel efficiency - Monitor fuel used	0.0083333333333333Hz
+Total fuel used (since activation)	Vehicle.Powertrain.FuelSystem.ConsumptionSinceStart	- Increase fuel efficiency - Monitor fuel used	Vehicle.LowVoltageSystemState='START'
+Trip Fuel Used		- Increase fuel efficiency - Monitor fuel used	Vehicle.LowVoltageSystemState='START'
+Fuel Tank Capacity	Vehicle.Powertrain.FuelSystem.Capacity	- Increase fuel efficiency - Monitor fuel used	
+Total engine idle time	Vehicle.Powertrain.CombustionEngine.IdleHours	- Reduce emissions	Vehicle.LowVoltageSystemState='START'
+DEF Level / Adblue	Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.Level	- Reduce emissions	0.0033333333333333Hz
+Aftertreatment fuel used	Vehicle.CombustionEngine.DieselExhaustFluid.Level	- Reduce emissions	Vehicle.LowVoltageSystemState='START'
+Aftertreatment DPF status	not in VSS yet, proposal Vehicle.CombustionEngine.DieselParticleFilter.Status	- Reduce emissions	CHANGE
+DPF regen status	not in VSS yet, proposal: Vehicle.CombustionEngine.DieselParticleFilter.Regen	- Reduce emissions	CHANGE
+Total fuel used while idling (since activation)	not in VSS yet, could calculate	- Reduce Idling - Monitor fuel used when idling	
+Trip fuel used while idling	not in VSS yet, could calculate	- Reduce Idling - Monitor fuel used when idling	
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Reduce idling - Increase fuel efficiency - Reduce greenhouse emissions during Idling	1Hz
+Speed	Vehicle.Speed	- Reduce idling - Increase fuel efficiency - Reduce greenhouse emissions during Idling	1Hz
+Ignition status	Vehicle.LowVoltageSystemState	- Reduce idling - Increase fuel efficiency - Reduce greenhouse emissions during Idling	CHANGE
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Identify opportunities for Fleet electrification 	1Hz
+Total fuel used (since activation) or Trip Fuel Used	Vehicle.Powertrain.FuelSystem.ConsumptionSinceStart	- Identify opportunities for Fleet electrification 	Vehicle.LowVoltageSystemState='START'
+EV battery charge % / state of charge (SOC)	Vehicle.Powertrain.TractionBattery.StateOfCharge.Current	- Ensure EVs are appropriately charged and fleets can run efficiently	CHANGE
+Range remaining	Vehicle.Powertrain.TractionBattery.Range	- Ensure EVs are appropriately charged and fleets can run efficiently	0.016666666666667Hz
+GPS	Vehicle.CurrentLocation.{Timestamp,Latitude,Longitude,Altitude}	- Optimize charging costs based on zones	1Hz
+Charging Status (AC/DC)	Vehicle.Powertrain.TractionBattery.Charging.IsCharging	- Ensure EVs are appropriately charged and fleets can run efficiently - Identify and track charging events to control charging costs	CHANGE
+AC / DC charging energy in	Vehicle.Powertrain.TractionBattery.Charging.ChargeRate	- Identify charging costs and optimize charging schedule	0.0083333333333333Hz*
+AC / DC charging energy out	Vehicle.Powertrain.TractionBattery.CurrentCurrent	- Identify charging costs and optimize charging schedule	0.0083333333333333Hz*
+EV Charging power	Vehicle.Powertrain.TractionBattery.GrossCapacity	- Identify charging costs and optimize charging schedule	0.0083333333333333Hz*
+AC Charging Voltage	Vehicle.Powertrain.TractionBattery.Charging.ChargeCurrent.Phase1 - confirm wrt p2&3	- Identify charging costs and optimize charging schedule	0.0083333333333333Hz*
+Driving energy out	not in VSS yet, proposal: Vehicle.Powertrain.TractionBattery.Driving.EnergyIn	- Identify electric energy economy and real-world range	Vehicle.LowVoltageSystemState='START'
+Driving energy in (from regenerative braking)	not in VSS yet, proposal: Vehicle.Powertrain.TractionBattery.Driving.EnergyOut	- Identify electric energy economy and real-world range	Vehicle.LowVoltageSystemState='START'
+Driving idle energy out	not in VSS yet, proposal: Vehicle.Powertrain.TractionBattery.Idle.EnergyIn	- Identify electric energy economy and real-world range	Vehicle.LowVoltageSystemState='START'
+Driving idle energy in	not in VSS yet, proposal: Vehicle.Powertrain.TractionBattery.Idle.EnergyOut	- Identify electric energy economy and real-world range	Vehicle.LowVoltageSystemState='START'
+EV battery capacity	Vehicle.Powertrain.TractionBattery.NetCapacity	- Identify electric energy economy and real-world range	
+Outside Temperature, Elevation	Vehicle.Exterior.AirTemperature Vehicle.CurrentLocation.Altitude	- Identify electric energy economy and real-world range	3m
+Hydrogen fuel level (%)	not in VSS yet, proposal: Vehicle.Powertrain.Hydrogen.Level	- Monitor Fuel level to ensure continued operations	0.0033333333333333Hz
+Hydrogen fuel used (weight)	not in VSS yet, proposal: Vehicle.Powertrain.Hydrogen.Consumption	- Monitor fuel used and economy	Vehicle.LowVoltageSystemState='START'
+Idling hydrogen fuel used (weight)	not in VSS yet, proposal: Vehicle.Powertrain.Hydrogen.ConsumptionIdle	- Monitor fuel used during idling and impact on economy	Vehicle.LowVoltageSystemState='START'
+			
+			
+			
+			
+			
+			
+			
+			
+			

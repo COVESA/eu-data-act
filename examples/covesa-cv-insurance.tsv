@@ -1,0 +1,82 @@
+Data Point/Feature	VSS	Primary Use Cases	Recommended Sampling
+Lane departure enabled status	Vehicle.ADAS.LaneDepartureDetection.IsEnabled	Detect near accident events for safety coaching and improvements	CHANGE
+Vertical acceleration	Vehicle.Acceleration.Vertical	Reduce accidents via accurate understanding of accident events	20-50 Hz
+Yaw gyroscope	Vehicle.AngularVelocity.Yaw	Reduce accidents via accurate understanding of accident events	20-50 Hz
+Pitch gyroscope	Vehicle.AngularVelocity.Pitch	Reduce accidents via accurate understanding of accident events	20-50 Hz
+Roll gyroscope	Vehicle.AngularVelocity.Roll	Reduce accidents via accurate understanding of accident events	20-50 Hz
+Magnometer	Vehicle.CurrentLocation.Heading	Reduce accidents via accurate understanding of accident events	20-50 Hz
+Blind spot detection enabled	Vehicle.ADAS.ObstacleDetection.*.*.IsEnabled	Detect near accident events for safety coaching and improvements	CHANGE
+Blind spot detection status	Vehicle.ADAS.ObstacleDetection.*.*.WarningType=BLIND_SPOT	Detect near accident events for safety coaching and improvements	CHANGE
+Right turn signal status	Vehicle.Body.Lights.DirectionIndicator.Right.IsSignaling	Detect near accident events for safety coaching and improvements	CHANGE
+Left turn signal status	Vehicle.Body.Lights.DirectionIndicator.Left.IsSignaling	Detect near accident events for safety coaching and improvements	CHANGE
+Lane line type	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Distance to collision	Vehicle.ADAS.ObstacleDetection.Front.*.Distance	Detect near accident events for safety coaching and improvements	5-10 Hz
+Time to collision	Vehicle.ADAS.ObstacleDetection.Front.*.TimeGap	Detect near accident events for safety coaching and improvements	5-10 Hz
+Forward object speed	Not in VSS	Detect near accident events for safety coaching and improvements	5-10 Hz
+Forward object type	Not in VSS	Reduce accidents via accurate understanding of accident events	CHANGE
+Road type	Not in VSS	Reduce accidents via accurate understanding of accident events	1/60 Hz
+Headlight status	Vehicle.Body.Lights.Beam.Low.IsOn	Reduce accidents via accurate understanding of accident events	CHANGE
+Electronic stability control status	Vehicle.ADAS.ESC.IsEnabled	Detect near accident events for safety coaching and improvements	CHANGE
+Electronic stability control status	Vehicle.ADAS.ESC.IsEngaged	Detect near accident events for safety coaching and improvements	CHANGE
+Left turn signal status	Vehicle.Body.Lights.DirectionIndicator.Left.IsSignaling	Detect near accident events for safety coaching and improvements	CHANGE
+Posted speed limit violation enabled	Not in VSS	Reduce Speeding/ Detect near accident events for safety coaching and improvements	CHANGE
+Posted speed limit value	Not in VSS	Reduce Speeding/ Detect near accident events for safety coaching and improvements	CHANGE
+Posted speed limit violation status	Not in VSS	Reduce Speeding/ Detect near accident events for safety coaching and improvements	CHANGE
+Stop sign violation enabled	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Stop sign violation status	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Traffic light violation enabled	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Traffic light violation status	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Lane keeping assistance enabled	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Lane keeping assistance status	Vehicle.ADAS.LaneDepartureDetection.IsEnabled	Detect near accident events for safety coaching and improvements	CHANGE
+Lane position and lane count	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE/(1/60 Hz)
+Rear Cross traffic alert	Vehicle.ADAS.ObstacleDetection.Rear.*.WarningType=CROSS_TRAFFIC	Detect near accident events for safety coaching and improvements	CHANGE
+Wrong way driving warning	Not in VSS	Detect near accident events for safety coaching and improvements	CHANGE
+Pedestrian Protection System	Not in VSS	Detect near accident events for safety coaching and improvements ;this could also be crash detection (pedestrian protection, bonnet/hood moving upwards in case of impact)	CHANGE
+Crosswind stabilization	Not in VSS	Reduce accidents via accurate understanding of accident events	CHANGE
+Intersection assistants	Not in VSS	Reduce accidents via accurate understanding of accident events	CHANGE
+Side of impact ->direction of impact	Not in VSS	Reduce accidents via accurate understanding of accident events	CHANGE
+Autonomous driving	Vehicle.ADAS.ActiveAutonomyLevel	Reduce accidents via accurate understanding of accident events	CHANGE
+Driver distraction device in hand	Not in VSS - closest are Vehicle.ADAS.DMS.IsWarning, Vehicle.Driver.IsHandsOnWheel, and Vehicle.Driver.AttentiveProbability	Detect near accident events for safety coaching and improvements	CHANGE
+Driver drowsiness detection	Vehicle.Driver.FatigueLevel	Detect near accident events for safety coaching and improvements	CHANGE
+Driver distraction head turn	Vehicle.Occupant.Row1.DriverSide.HeadPosition	Detect near accident events for safety coaching and improvements	CHANGE
+Tire Pressure	Vehicle.Chassis.Axle.*.*.*.Tire.Pressure	Detect and manage low / high tire pressure situations	0.00333333Hz
+Road speed	Vehicle.Speed	Reduce speeding	1 Hz
+Fuel volume remaining (L)	Vehicle.Powertrain.FuelSystem.AbsoluteLevel	Incresase fuel efficiency, monitor fuel used	0.0083333333Hz
+Driver Seat Belt	Vehicle.Cabin.Seat.Row1.DriverSide.IsBelted	increase seatbelt use	CHANGE
+Impact Status/Airbag Deployed status/ Accident detection	Vehicle.Cabin.Seat.*.*.Airbag.IsDeployed	Detect accident events remotely	CHANGE
+Accident reconstruction data (granular acceleration and GPS data before and after accident)	is this application to VSS?	Reduce accidents via accurate understanding of accident events	
+Brake pedal status	Vehicle.Chassis.Brake.PedalPosition	Reduce accidents via accurate understanding of accident events	CHANGE
+Cruise control status	Vehicle.ADAS.CruiseControl.{IsActive,IsError,SpeedSet}	Reduce accidents via accurate understanding of accident events	CHANGE
+Cruise control interactions	@@accelerator, brake, setting speed etc and conditional logic	Driver interaction or overriding CC	
+Passenger occupancy	Vehicle.Cabin.Seat.Row{1,2}.{DriverSide, Middle, PassengerSide}.IsOccupied	Increase seatbelt use for passengers	CHANGE
+Passenger seatbelt	Vehicle.Cabin.Seat.Row{1,2}.{DriverSide, Middle, PassengerSide}.IsBelted	Increase seatbelt use for passengers	CHANGE
+Gear position	Vehicle.Powertrain.Transmission.CurrentGear	Reduce backing while leaving	CHANGE
+GPS	Vehicle.CurrentLocation.{Timestamp, Latitude, Longitude, Altitude}	Understand location of safety events	5Hz
+Ignition status	Vehicle.LowVoltageSystemState	Detect asset usage out of office hours	CHANGE
+Parking Brake	Vehicle.Chassis.ParkingBrake.IsEngaged	Reduce rollaway events	Vehicle.LowVoltageSystemState='START'
+Anti-lock brake system (ABS) status	Vehicle.ADAS.ABS.{IsEngaged,IsEnabled}	Detect near accident events for safety coaching and improvements	CHANGE
+Lane departure status	Vehicle.ADAS.LaneDepartureDetection.IsWarning	Detect near accident events for safety coaching and improvements	CHANGE
+Driver behavior on lane detection warning	See ACC driver interaction, use similar convention	Is the driver ignoring lane detection warning, overriding haptic feedback, putting on signal etc	
+Automatic/ emergency brake status	Vehicle.ADAS.EBA.IsEngaged	Detect near accident events for safety coaching and improvements	CHANGE
+Obstacle warning status	Vehicle.ADAS.ObstacleDetection.*.*.IsWarning	Detect near accident events for safety coaching and improvements	CHANGE
+Traction Control system status	Vehicle.ADAS.TCS.IsEngaged	Detect near accident events for safety coaching and improvements	CHANGE
+Collision mitigation brake status	Vehicle.ADAS.EBA.IsEngaged	Detect near accident events for safety coaching and improvements	CHANGE
+Engine speed (rpm)	Vehicle.Powertrain.CombustionEngine.Speed	Reduce over-revving events	0.033333333333Hz
+Engine oil pressure	Vehicle.Powertrain.CombustionEngine.EOP	Reduce accidents by detecting abnormal values of key engine metrics	0.0033333333Hz
+Airbag module health, Seatbelt health, Parking brake health	Airbag only has idDeployed no health check, same with seatbelt and parking brake - whether in use, no error checking	Ensure key safety features are working	
+Forward and backward acceleration	Vehicle.Acceleration.Longitudinal	Reduce harsh braking and acceleration / Reduce accidents via accurate undertanding of accident events	20-50 Hz
+Side to side acceleration	Vehicle.Acceleration.Lateral	Reduce harsh cornering / Reduce accidents via accurate understanding of accident events	20-50 Hz
+Road speed	Vehicle.Speed	Understand speed during safety events	5 Hz
+Odometer	Vehicle.TraveledDistance	Reduce accidents via accurate understanding of accident events	CHANGE/0.008333f Hz
+Windshield wiper status	Vehicle.Body.Windshield.Front.Wiping.System.IsWiping	Reduce accidents via accurate understanding of accident events	CHANGE
+Road conditions	Not in VSS - closest are under Vehicle.ADAS.ESC.RoadFriction	Reduce accidents via accurate understanding of accident events	CHANGE
+Roll-Over event		Describe accident situation	CHANGE
+blinker/indicator usage		Reduce accidents via accurate understanding of accident events	
+overtaking event	not in VSS	Reduce accidents via accurate understanding of accident events	CHANGE
+interruption of planned maneuvre (like overtaking)		critical incident	
+application of minimum risk mode (e.g. safety stop, turtle mode)		critical incident	
+emergency braking event		critical incident	
+manual interaction/override needed by remote operator (e.g. deactivation of ADS function)		critical incident	
+start/end of emergency maneuver		critical incident	
+transition demand to driver (reason)		critical event	
+gross weight of vehicle	Vehicle.CurrentOverallWeight	precondition for AV-mode	
