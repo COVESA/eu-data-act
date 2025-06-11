@@ -104,3 +104,14 @@ The mapping of the ACEA proposal for a predefined data list, Level A1,
 to VSS builds upon the work on [Issue
 #180](https://github.com/COVESA/vehicle_signal_specification/issues/180)
 in the COVESA `vehicle_signal_specification` GitHub repository.
+
+### Essential Fleet Signals
+
+This is a condensed version of the COVESA Commercial Vehicle Expert
+Group’s list of essential fleet signals. Compared to the original, it
+includes fewer fields.
+
+### Desired Insurance Signals
+
+This is the desired list of insurance signals from the COVESA
+Commercial Vehicle Expert Group.
