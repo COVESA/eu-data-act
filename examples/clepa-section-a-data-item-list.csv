@@ -1,0 +1,530 @@
+Data Item,Description,Type,Unit,Function
+Vehicle.Acceleration.Lateral,Vehicle acceleration along Y axis.,number,m/s^2,r
+Vehicle.Acceleration.Longitudinal,Vehicle acceleration along X axis.,number,m/s^2,r
+Vehicle.Acceleration.Vertical,Vehicle acceleration along Z axis.,number,m/s^2,r
+Vehicle.ADAS.ABS.Error,An indication of whether a fault signal for the ABS system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.ABS.IsActive,An indication of the current activation status of the ABS system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.ABS.IsEngaged,An indication if ABS is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.AEBS.Error,An indication of whether a fault signal for the AEBS system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.AEBS.IsActive,An indication of the current activation status of the AEBS system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.AEBS.IsEngaged,An indication if AEBS is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.ACSF.Error,An indication of whether a fault signal for the ACSF system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.ACSF.IsActive,An indication of the current activation status of the ACSF system. True = Activated. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.CruiseControl.Error,An indication of whether a fault signal for the CruiseControl system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.CruiseControl.IsActive,An indication of the current activation status of the CruiseControl system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.CruiseControl.IsEngaged,An indication if CruiseControl is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.CruiseControl.SpeedLimit,Selected speed limit by speed limiter.,number,km/h,rw
+Vehicle.ADAS.CruiseControl.TargetSpeed,Selected cruise control speed.,number,km/h,rw
+Vehicle.ADAS.CruiseControl.IsOverriden,An indication of whether CruiseControl system was overridden by driver intervention when the system was active.,boolean,-,r
+Vehicle.ADAS.ESP.Error,An indication of whether a fault signal for the ESP/ESC system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.ESP.IsActive,An indication of the current activation status of the ESP/ESC system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.ESP.IsEngaged,An indication if ESP/ESC is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.ESP.Sensors,The current vehicle stability measurements as provided by the ESP system.,string,-,r
+Vehicle.ADAS.Interventions,The current cumulative number of times a driver assistant system has intervened in the driving process.,number,-,r
+Vehicle.ADAS.LaneDetection.CurrentLane,"The current driving lane the vehicle is in, relative to the detected surrounding lanes.",string,-,r
+Vehicle.ADAS.LaneDetection.Error,An indication of whether a fault signal for the LaneDetection system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.LaneDetection.IsActive,An indication of the current activation status of the LaneDetection system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.LaneDetection.IsEngaged,An indication if LaneDetection is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.LaneDetection.Lanes,The current calculated number of driving lanes at the vehicle's disposal.,number,-,r
+Vehicle.ADAS.ObstacleDetection.DistanceToObject,Value(s) of the current vehicle's distance to surrounding objects.,string,-,r
+Vehicle.ADAS.ObstacleDetection.IsActive,An indication of the current activation status of the ObstacleDetection system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.ObstacleDetection.ObjectCloseAlarm,An indication of whether the distance of the vehicle to a surrounding object is below a set threshold for which an alarm is triggered.,boolean,-,r
+Vehicle.ADAS.ObstacleDetection.Objects,"The kind, size and relative distance of objects surrounding the vehicle as detected by the vehicle's object detection sensors.",string,-,r
+Vehicle.ADAS.TCS.Error,An indication of whether a fault signal for the traction control system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.TCS.IsActive,An indication of the current activation status of the traction control system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.TCS.IsEngaged,An indication if traction control is currently engaged in regulating vehicle behavior. True = Engaged. False = Not Engaged.,boolean,-,r
+Vehicle.ADAS.ParkAssist.Error,An indication of whether a fault signal for the park assist system is issued. True = fault. False = No fault.,boolean,-,r
+Vehicle.ADAS.ParkAssist.IsActive,An indication of the current activation status of the park assist system. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.ADAS.ParkAssist.OperationType,An indication of performed maneuvre/operation.,string,-,r
+Vehicle.ADAS.Tachograph.Status,The summary of tachograph status of the vehcile. To be expanded into multiple data items.,string,-,r
+Vehicle.Alarm.IsActive,An indication of whether the theft alert is enabled.,boolean,-,rw
+Vehicle.Alarm.IsEngaged,An indication of whether the theft alert triggers have triggered the alarm.  True = triggered. False = Not triggered.,boolean,-,rw
+Vehicle.AngularVelocity.Pitch,Vehicle rotation rate along Y axis as measured by the on-board gyroscope.,number,rad/s,r
+Vehicle.AngularVelocity.Roll,Vehicle rotation rate along X axis as measured by the on-board gyroscope.,number,rad/s,r
+Vehicle.AngularVelocity.Yaw,Vehicle rotation rate along Z axis as measured by the on-board gyroscope.,number,rad/s,r
+Vehicle.Battery.Capacity,Remaining battery capacity as a percentage. The value is between 0% and 100%.,number,%,r
+Vehicle.Battery.Current,The battery output current.,number,A,r
+Vehicle.Battery.LowVoltageWarning,An indication of whether the battery level is running low.,boolean,-,r
+Vehicle.Battery.SOC,An indication of the battery's status in its current charging cycle.,number,%,r
+Vehicle.Battery.Temperature,The battery temperature.,number,C,r
+Vehicle.Battery.Voltage,The battery output voltage.,number,V,r
+Vehicle.Body.GasFlap.IsLocked,An indication of the fuel door lock status.,boolean,-,rw
+Vehicle.Body.Hood.IsLocked,An indication of whether the vehicle's hood is locked.,boolean,-,rw
+Vehicle.Body.Hood.IsOpen,An indication of whether the vehicle's hood is open or closed.,boolean,-,rw
+Vehicle.Body.Hood.IsSafeLocked,An indication of whether the vehicle's hood is safe locked.,boolean,-,rw
+Vehicle.Body.Horn.IsActive,Horn On/Off status. True = Horn is on. False = Horn is off.,boolean,-,rw
+Vehicle.Body.Lights.IsBackupOn,An indication of whether the backup light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsBrakeOn,An indication of whether the brake light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsFrontFogOn,An indication of whether the fron fog light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsHazardOn,An indication of whether the hazard/warning  light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsHighBeamOn,An indication of whether the high beam light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsLeftIndicatorOn,An indication of whether the turn left indicator  light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsLowBeamOn,An indication of whether the low beam light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsParkingOn,An indication of whether the parking light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsRearFogOn,An indication of whether the rear fog  light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsRightIndicatorOn,An indication of whether the turn right indicator light is currently activated.,boolean,-,rw
+Vehicle.Body.Lights.IsRunningOn,An indication of whether the running light is currently activated.,boolean,-,rw
+Vehicle.Body.Mirror.Heating,Mirror heating status. True = Heater On. False = Heater Off.,boolean,-,rw
+Vehicle.Body.Mirror.Pan,Mirror pan position.  100 = left;  0 = center;-100 = right;,number,%,rw
+Vehicle.Body.Mirror.Tilt,Mirror tilt position.  100 = up;  0 = center;-100 = down;,number,%,rw
+Vehicle.Body.Raindetection.IsActive,Reports the status of rain detection sytem.  True = Enabled. False = Disabled.,boolean,-,r
+Vehicle.Body.Raindetection.Intensity,Rain intensity value as a percent.,number,%,r
+Vehicle.Body.RefuelPosition,Location of the fuel cap on the vehicle body. String.,string,-,r
+Vehicle.Body.Trunk.IsLocked,An indication of the current lock status of the trunk door.,boolean,-,rw
+Vehicle.Body.Trunk.IsOpen,An indication of whether the boot lid is currently open.,boolean,-,rw
+Vehicle.Body.Trunk.IsSafeLocked,An indication of the current safe lock status of the trunk door.,boolean,-,rw
+Vehicle.Body.Windshield.Heating.IsEngaged,Windshield heating status. True = heating on. False = heating off.,boolean,-,rw
+Vehicle.Body.Windshield.WasherFluid.Level,Washer fluid level as a percent.,number,%,r
+Vehicle.Body.Windshield.WasherFluid.LevelLow,Low level indication for washer fluid. True =  Low. False = OK.,boolean,-,r
+Vehicle.Body.Windshield.Wiper.IsEngaged,Windshield Wiper status. True = wiper on. False = wiper off.,boolean,-,rw
+Vehicle.Body.Windshield.Wiper.Speed,"Wiper speed, enumerated and returned as a string. Example: SECOND.",boolean,-,rw
+Vehicle.Cabin.Airbag.Error,An indication of whether a fault signal for the airbag is issued. True = Error. False = No error.,boolean,-,r
+Vehicle.Cabin.Airbag.IsActive,An indication of the current activation status of the airbag. True = Enabled. False = Disabled.,boolean,-,rw
+Vehicle.Cabin.Airbag.IsDeployed,An indication of whether the airbag was deployed after a firing from airbag triggers.,boolean,-,r
+Vehicle.Cabin.Airbag.IsReleased,An indication of whether an airbag was released. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Airbag.IsTriggered,An indication of whether the airbag triggers have activated after sensor data exceeded threshold levels. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Airbag.WarningLamp,An indication of whether a warning signal for the airbag system is issued. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Convertible.State,An indication of the current status of the convertible roof.,string,-,rw
+Vehicle.Cabin.Dashboard.ABSDisabledWIL,ABS disabled warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.AdaptiveCruiseControlWarmupWIL,Adaptive cruise control warnig lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.AirFilterWIL,Air filter warnig lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.AirSuspensionWIL,Air suspension warnig lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.AntiTheftEnabledWIL,Theft detection system enablement status.,boolean,-,r
+Vehicle.Cabin.Dashboard.AWDDisabledWIL,All wheel drive diabled warnig lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.BatteryWIL,An indication of whether a warning signal for the battery is issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.BlindSpotDetectionWIL,Blind spot detection warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.BrakeWIL,Brakes warnibg lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.ChargeSystemWIL,Charge system warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.CheckControlMessages,Check control messages warning light status.,boolean,-,r
+Vehicle.Cabin.Dashboard.CheckFuelCapWIL,Fuel cap warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.CheckFuelInletWIL,Fuel inlet warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.CoolantLevelWIL,An indication of whether the coolant level is low and in need of a refill.,boolean,-,r
+Vehicle.Cabin.Dashboard.CoolantTemperatureWIL,An indication of whether a warning signal for the coolant temperature is issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.DieselEngineWIL,Check diesel engine warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.DieselIdleShutdownWIL,Disel Idle shutdown warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.EVDischargeWarning,EV Battery discharge warning.,boolean,-,r
+Vehicle.Cabin.Dashboard.ExhaustFluidLowWIL,Exhaust fluid low warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.ExhaustFluidWIL,Exhause fluid warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.ExhaustOverTempWIL,Exhaust high temperature warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.FastenSeatbeltWIL,An indication of whether the seatbelt buckle is not fastened for an occupied seat.,boolean,-,r
+Vehicle.Cabin.Dashboard.ForwardCollisionWIL,Forward collision warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.FuelDoorOpenWIL,Fuel door open warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.HEVHazardWIL,HEV Hazard warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.HillControlFaultWIL,Hill control fault warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.HillStartAssistWIL,Hill start assist warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.KeylessEntryWIL,Keyless entry warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.LaneAidWIL,Lane aid warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.LightingFailureWIL,Lighting failure warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.LowFuelLevelWIL,An indication of whether the fuel level is running low and in need of a refill.,boolean,-,r
+Vehicle.Cabin.Dashboard.LowOilLevelWIL,An indication of whether the oil level is low and in need of a refill.,boolean,-,r
+Vehicle.Cabin.Dashboard.MILStatus,An indication of whether MIL signal was issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.OilPressureWIL,An indication of whether the oil pressure is outside of normal bounds. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Dashboard.OilTemperatureWIL,An indication of whether the oil temperature is high. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Dashboard.ParkAidMalfunctionWIL,Par aid error warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.ParkingBrakeWIL,An indication whenever parking barke ON signal was issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.ParticulateFilterWIL,An indication of whether a warning signal for the diesel particulate filter is issued. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Dashboard.PowerSteeringWIL,An indication of whether the power steering system is currently encountering a problem. Set to off by default.,boolean,-,r
+Vehicle.Cabin.Dashboard.PowerTrainWIL,Powertrain warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.PreHeatWIL,Pre heat warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.ServiceAndStopWIL,Service & Stop Lights Blinking Request.,boolean,-,r
+Vehicle.Cabin.Dashboard.SRSDisabledWIL,SRS disabled warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.StartStopEngineWIL,Start-stop warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.TireWIL,An indication of whenever tire warning signal was issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.TractionControlDisabledWIL,Traction control disabled warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.TractionControlInWorkWIL,Traction control is engaged warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.TrailerBrakeConnectionWIL,Trailer brakes connection warning lamp status.,boolean,-,r
+Vehicle.Cabin.Dashboard.WaterInFuelWIL,An indication of whether water in fuel error was issued.,boolean,-,r
+Vehicle.Cabin.Dashboard.WiperFluidLowWIL,Wiper fluid low warning lamp status.,boolean,-,r
+Vehicle.Cabin.Door.IsLocked,An indication of the current lock status of the door.,boolean,-,rw
+Vehicle.Cabin.Door.IsOpen,An indication of whether the door is open.,boolean,-,rw
+Vehicle.Cabin.Door.IsSafeLocked,An indication of whether the door is in locked safe state.,boolean,-,rw
+Vehicle.Cabin.HVAC.Filter.DueDate,The current estimated filter service date.,string,-,r
+Vehicle.Cabin.HVAC.Filter.DueDistance,The current remaining number of kilometers until the next micro filter service should be performed.,number,km,r
+Vehicle.Cabin.HVAC.Filter.ServicesDone,The current cumulative number of micro filter services performed on the vehicle.,number,-,r
+Vehicle.Cabin.HVAC.IsAirConditioningActive,Indicates the current air conditioning status.,boolean,-,rw
+Vehicle.Cabin.HVAC.TargetTemperature,The currently selected desired temperature for the vehicle interior.,number,C,rw
+Vehicle.Cabin.HVAC.Temperature,The currently measured temperature in the vehicle interior.,number,C,r
+Vehicle.Cabin.IgnitionLock.Mode,An indication of the currently selected mode on the ignition lock switch.,string,-,r
+Vehicle.Cabin.Infotainment.HMI.DisplayMessageToDriver,A function that display provided text to driver.,string,-,e
+Vehicle.Cabin.Infotainment.HMI.TTSMessageToDriver,A function that reads the provided text to driver.,string,-,e
+Vehicle.Cabin.Infotainment.HMI.WarnToDriver,A function that displays one of pre-provided warning to the driver.,string,-,e
+Vehicle.Cabin.Infotainment.HMI.OfferChoiceToDriver,A function that displays a choice to driver and asks for his input.,string,-,e
+Vehicle.Cabin.Infotainment.HMI.DateTime,The current date and time shown in the vehicle.,string,-,r
+Vehicle.Cabin.Infotainment.HMI.DistanceUnit,An indication of the units (kilometers or miles) in which distances are shown on the vehicle instrument panel.,string,-,r
+Vehicle.Cabin.Infotainment.Navigation.DestinationDistance,The current distance to the active navigation destination in kilometers.,number,km,r
+Vehicle.Cabin.Infotainment.Navigation.DestinationETA,The estimated arrival time at the navigation destination.,string,-,r
+Vehicle.Cabin.Infotainment.Navigation.DestinationSet,The current coordinates of the active navigation destination.,string,-,rw
+Vehicle.Cabin.Infotainment.Navigation.FreePOINumber,Amount of POI free in the navigation system.,string,-,r
+Vehicle.Cabin.Infotainment.Navigation.Landmarks,The location of and relative distance of the vehicle to known landmarks and points of interests.,string,-,r
+Vehicle.Cabin.Infotainment.Navigation.POIMaxMemoryNumber,Maximum number of POI stored in the navigation system.,string,-,r
+Vehicle.Cabin.Infotainment.Navigation.Range,"Remaining fuel range, as reported by navigation system.",number,km,r
+Vehicle.Cabin.Infotainment.Navigation.Routing,The information required to provide directions and propose alternative routes over the onboard navigation system.,string,-,rw
+Vehicle.Cabin.Key.ID,An indication of the key that is used to authorize use of the vehicle.,string,-,r
+Vehicle.Cabin.Light.IsOn,In-cabing light status.,boolean,-,rw
+Vehicle.Cabin.LightSwitch.Mode,The position of the light switch.,string,-,r
+Vehicle.Cabin.RearviewMirror.DimmingLevel,Dimming level of rearview mirror as a percent.,number,%,rw
+Vehicle.Cabin.Seat.HasPassenger,Seat occupancy status.,boolean,-,r
+Vehicle.Cabin.Seat.IsBelted,An indication that seat belt is on for this seat.,boolean,-,r
+Vehicle.Cabin.Seat.PreTensionerDeployed,Pre-tensioner deployment status.,boolean,-,r
+Vehicle.Cabin.Sunroof.Position,Position of the sunroof (if the vehicle has one)  as a percent. 0 = Fully closed 100 = Fully opened.,number,%,rw
+Vehicle.Cabin.Sunroof.Tilting,An indication of the current tilt state of the sunroof (if the vehicle has one).  0 = Fully closed 100 = Fully opened.,number,%,rw
+Vehicle.Cabin.Window.Position,An indication of the window state.  0 = Fully closed 100 = Fully opened.,number,%,rw
+Vehicle.Cabin.Window.State,Window state.,string,-,rw
+Vehicle.Chassis.Brake.BrakesWorn,An indication of whether the brake  is worn off as a percent. 0 = no worn. 100 fully worn.,number,%,r
+Vehicle.Chassis.Brake.DueDate,The estimated remaining lifetime of the brakes.,string,-,r
+Vehicle.Chassis.Brake.Fluid.DueDate,The estimated remaining lifetime of the brake fluid.,string,-,r
+Vehicle.Chassis.Brake.Fluid.Level,The current estimated brake fluid level.,number,%,r
+Vehicle.Chassis.Brake.Fluid.LevelLowWarning,An indication of whether the brake fluid level is low.,boolean,-,r
+Vehicle.Chassis.Brake.Fluid.ServiceDone,The current cumulative number of brake fluid services performed on the vehicle.,number,-,r
+Vehicle.Chassis.Brake.Pad.LowWarning,An indication of whether the brake pads surface material is worn off and in need of replacement.,boolean,-,r
+Vehicle.Chassis.Brake.Pad.Status,An indication of the current brake pads status.,string,-,r
+Vehicle.Chassis.Brake.PedalPosition,The current relative position of the brake pedal.,number,%,r
+Vehicle.Chassis.Brake.Service.DueDistance,The current remaining number of kilometers until the next brakes service should be performed.,string,-,r
+Vehicle.Chassis.Brake.ServiceDone,The current cumulative number of brake services performed on the vehicle.,number,-,r
+Vehicle.Chassis.CurbWeight,"Vehicle curb weight, in kg.",number,kg,r
+Vehicle.Chassis.GrossWeight,"Gross weight of vehicle, in kg.",number,kg,r
+Vehicle.Chassis.Height,"Overall vehicle height, in mm.",number,mm,r
+Vehicle.Chassis.Length,"Overall vehicle length, in mm.",number,mm,r
+Vehicle.Chassis.LiftAxle.Position,The position of lift axle.,string,-,r
+Vehicle.Chassis.LiftAxle.Status,The status of lift axle.,string,-,r
+Vehicle.Chassis.ParkingBrake.IsEngaged,An indication of the current parking brake status.,boolean,-,r
+Vehicle.Chassis.SteeringWheel.RotationSpeed,"The current rotation speed of the steering wheel, measured in ‎rad/s.",number,km/h,r
+Vehicle.Chassis.SteeringWheel.Angle,The current rotation of the steering wheel to the left or the right in radial degrees. Positive values for counterclockwise and begative values for clockwise rotation.,number,rad,r
+Vehicle.Chassis.Wheel.RotationSpeed,"The current wheel rotation speed, in rad/s.",number,rad/s,r
+Vehicle.Chassis.Wheel.Speed,"Current speed value in km/h, as sensed by the  wheel.",number,km/h,r
+Vehicle.Chassis.Tire.Pressure,The current tire pressure value.,number,kPa,r
+Vehicle.Chassis.Tire.PressureDifference,The difference from target pressure.,number,%,r
+Vehicle.Chassis.Tire.PressureSensorBattery,The current remaining lifetime of the tyre pressure battery relative to their maximum intended lifetime.,string,-,r
+Vehicle.Chassis.Tire.Size,Tire size label as a string.,string,-,r
+Vehicle.Chassis.Tire.Speed,"Current speed value, as sensed by the tire.",number,km/h,r
+Vehicle.Chassis.Tire.TargetPressure,The target pressure for the tire.,number,kPa,rw
+Vehicle.Chassis.Tire.Temperature,Current tire temperature.,number,C,r
+Vehicle.Chassis.TowWeight,"Trailer maximum weight, in kg.",number,kg,r
+Vehicle.Chassis.Wheelbase,"Overall wheel base, in mm.",number,mm,r
+Vehicle.Trailer.IsConnected,Trailer connection status.,boolean,-,r
+Vehicle.Chassis.Width,"Overall vehicle width, in mm.",number,mm,r
+Vehicle.Crash.IsDetected,An indication of whethera crash took place.,boolean,-,r
+Vehicle.Crash.RolloverStatus,An indication of the vehicle being rolled over to the side or is upside down.,string,-,r
+Vehicle.Crash.Sensors,The current measurement values provided by the impact and/or crash event sensors.,string,-,r
+Vehicle.Crash.Severity,Severity of the crash.,string,-,r
+Vehicle.Crash.SpeedAtImact,The speed in km/h measured by the vehicle speed sensor.,number,km/h,r
+Vehicle.Diagnostics.DoIP.Establish,"Establishes UDS over IP session, as per ISO 13400-2:2019 (DoIP) and ISO 14229-1:2013 (UDS)",string,-,e
+Vehicle.Diagnostics.Alternator.Current,The current alternator current of the drive battery.,number,A,r
+Vehicle.Diagnostics.Alternator.Load,The current alternator load of the drive battery.,number,,r
+Vehicle.Diagnostics.AcceleratorPositionD,The current normalized value of engine air mass per intake stroke expressed in percentages.,number,%,r
+Vehicle.Diagnostics.AccumulatedRunTimeWithMIL,The current total continuous time elapsed since a general or emission-related malfunction indicator light (MIL) was activated by the onboard diagnostics system.,string,-,r
+Vehicle.Diagnostics.ClearDTC,The job to clear DTC from the vehicle.,string,-,e
+Vehicle.Diagnostics.Clutch.Status,The current clutch status as a percent. 0 is fully disconnected and 100 is fully connected.,number,%,r
+Vehicle.Diagnostics.Clutch.Temperature,The current temperature of the clutch.,number,C,r
+Vehicle.Diagnostics.DistanceSinceDTCClear,The current number of kilometers driven by the vehicle since any Diagnostic Trouble Codes were cleared.,number,km,r
+Vehicle.Diagnostics.DistanceWithDTC,The current number of kilometers driven since a malfunction indicator light (MIL) was activated by the onboard diagnostics system.,number,km,r
+Vehicle.Diagnostics.DistanceWithMIL,The current number of kilometers driven since a malfunction indicator light was activated.,number,km,r
+Vehicle.Diagnostics.DTC.ID,The DTC code as logged/frozen upon detection in the on-board diagnosis system.,string,-,r
+Vehicle.Diagnostics.DTC.ECU,An indication of the ECU from which a reported diagnostic trouble code originates.,string,-,r
+Vehicle.Diagnostics.DTC.ReportedAt,The time at which a DTC was registered by in-vehicle diagnostics.,string,-,r
+Vehicle.Diagnostics.ECU.Acceleration.Identifier,Acceleration ECU identifier.,string,-,r
+Vehicle.Diagnostics.ECU.Transmission.Identifier,Transmission ECU identifier.,string,-,r
+Vehicle.Diagnostics.ECUs,The list of ECUs installed.,string,-,r
+Vehicle.Diagnostics.Engine.DemandedTorque,The current torque demanded by the driver as percentage of the engine's recommended maximum torque.,number,%,r
+Vehicle.Diagnostics.Engine.HPA.Pressure,System Pressure of High Pressure Area.,number,kPa,r
+Vehicle.Diagnostics.Engine.HPA.Temperature,System Temperature of High Pressure Area.,number,C,r
+Vehicle.Diagnostics.Engine.LPA.Pressure,System Pressure of Low Pressure Area.,number,kPa,r
+Vehicle.Diagnostics.Engine.LPA.Temperature,System Temperature of Low Pressure Area.,number,C,r
+Vehicle.Diagnostics.Engine.StartStopNum,Number of Engine Start/Stop.,number,-,r
+Vehicle.Diagnostics.Exhaust.BoostPressureMonitorCompletionConditionCounts,Boost Pressure Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.BoostPressureMonitorConditionsEncounteredCounts,Boost Pressure Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.Catalyst.Temperature,"The current temperature measured inside the catalytic converter. Values provided separately for bank 1 sensor 1, b1s2, b2s1, and b2s2.",number,C,r
+Vehicle.Diagnostics.Exhaust.CommandedEVAP,The current amount of exhaust gas recirculation commanded by the powertrain control module from the EGR valve.,string,-,r
+Vehicle.Diagnostics.Exhaust.EGRError,The current calculated percentual error positively or negatively deviating from the actual commanded exhaust gas recirculation.,number,%,r
+Vehicle.Diagnostics.Exhaust.EVAPVaporPressure,"The current fuel vapor pressure in the evaporative emission control system, measured by a sensor in the fuel tank.",number,kPa,r
+Vehicle.Diagnostics.Exhaust.EVAPVaporPressureAbsolute,"The current fuel vapor pressure in the evaporative emission control system, measured by a sensor in the fuel tank, as absolute value.",number,kPa,r
+Vehicle.Diagnostics.Exhaust.EVAPVaporPressureAlternate,"The current fuel vapor pressure in the evaporative emission control system, measured by a sensor in the fuel tank, as secondary value with a wider range..",number,kPa,r
+Vehicle.Diagnostics.Exhaust.Fuel Monitor Conditions Encountered Counts,Fuel Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.FuelMonitorCompletionConditionCounts,Fuel Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.Gas.Recirculation Temperature,Exhaust Gas Recirculation Temperature.,number,C,r
+Vehicle.Diagnostics.Exhaust.Gas.Sensor Monitor Completion Condition Counts,Exhaust Gas Sensor Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.Gas.Sensor Monitor Conditions Encountered Counts,Exhaust Gas Sensor Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.Gas.Temperature,Exhaust Gas Temperature on Bank 2,number,C,r
+Vehicle.Diagnostics.Exhaust.Manifold Surface Temperature,Manifold Surface Temperature.,number,C,r
+Vehicle.Diagnostics.Exhaust.NMHC.CatalystMonitorCompletionConditionCounts,NMHC Catalyst Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NMHC.CatalystMonitorConditionsEncounteredCounts,NMHC Catalyst Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NOx.AdsorberMonitorCompletionConditionCounts,NOx Adsorber Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NOx.AdsorberMonitorConditionsEncounteredCounts,NOx Adsorber Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NOx.CatalystMonitorCompletionConditionCounts,NOx Catalyst Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NOx.CatalystMonitorConditionsEncounteredCounts,NOx Catalyst Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.NOx.NTE Control Area Status,NOx NTE Control Area Status.,string,-,r
+Vehicle.Diagnostics.Exhaust.NOx.Reagent System,NOx Reagent System.,string,-,r
+Vehicle.Diagnostics.Exhaust.NOx.Sensors,NOx Sensors at Current Values.,string,-,r
+Vehicle.Diagnostics.Exhaust.PMFilterMonitorCompletionConditio Counts,PM Filter Monitor Completion Condition Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.PMFilterMonitorConditionsEncounteredCounts,PM Filter Monitor Conditions Encountered Counts.,number,-,r
+Vehicle.Diagnostics.Exhaust.PMNTEControlAreaStatus,PM NTE Control Area Status.,string,-,r
+Vehicle.Diagnostics.Exhaust.Pressure,Exhaust Pressure.,number,kPa,r
+Vehicle.Diagnostics.Ignition.CorrectionQuantityRangeHistogram,Correction Quantity Range Histogram.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load EKP Electric Fuel Pump Profile,ECU Power Stage Dynamic Load EKP Electric Fuel Pump Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load NDVK Low Pressure Compressor Bypass Profile,ECU Power Stage Dynamic Load NDVK Low Pressure Compressor Bypass Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.AGR2 Profile,ECU Power Stage Dynamic Load AGR2 Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.AGRKB EGR Cooler Bypass Control Profile,ECU Power Stage Dynamic Load AGRKB EGR Cooler Bypass Control Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.ARK Charging Turbine Bypass High Pressure Profile,ECU Power Stage Dynamic Load ARK Charging Turbine Bypass High Pressure Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.DK Throttle Profile,ECU Power Stage Dynamic Load DK Throttle Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.DRV Rail Pressure Control Valve Profile,ECU Power Stage Dynamic Load DRV Rail Pressure Control Valve Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.EWAPU Electric Water Pump Profile,ECU Power Stage Dynamic Load EWAPU Electric Water Pump Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.OLP Regulating Valve Oil Pump Profile,ECU Power Stage Dynamic Load OLP Regulating Valve Oil Pump Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.VNT1 Steller High Pressure Turbine Profile,ECU Power Stage Dynamic Load VNT1 Steller High Pressure Turbine Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.VNT2 Steller High Pressure Turbine Profile,ECU Power Stage Dynamic Load VNT2 Steller High Pressure Turbine Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.VS Swirl Flap Profile,ECU Power Stage Dynamic Load VS Swirl Flap Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECU Power Stage Dynamic Load.ZME Metering Profile,ECU Power Stage Dynamic Load ZME Metering Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.ECUAGR1Profile,ECU Power Stage Dynamic Load AGR1 Profile.,string,-,r
+Vehicle.Diagnostics.Ignition.Engine Temperature versus Glow Plug Phases,Engine Temperature versus Glow Plug Phases.,string,-,r
+Vehicle.Diagnostics.Ignition.Event Counter Zero Fuel Amount Calibration,Event Counter Zero Fuel Amount Calibration.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Plug High-Level Resistance versus Engine Coolant Temperature,Glow Plug High-Level Resistance versus Engine Coolant Temperature.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Plug Learning Aborted Counter,Glow Plug Learning Aborted Counter.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Plug Learning Successful Counter,Glow Plug Learning Successful Counter.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Plug Low-Level Resistance versus Engine Coolant Temperature,Glow Plug Low-Level Resistance versus Engine Coolant Temperature.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Temperature versus Glow Plug Glowing States,Glow Temperature versus Glow Plug Glowing States.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow Time at Current Level,Glow Time at Current Level.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow-Control Duty Cycle versus Battery Voltage,Glow-Control Duty Cycle versus Battery Voltage.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow-Control Duty Cycle versus ECU Temperature,Glow-Control Duty Cycle versus ECU Temperature.,string,-,r
+Vehicle.Diagnostics.Ignition.Glow-Control Duty Cycle versus Engine RPM,Glow-Control Duty Cycle versus Engine RPM.,string,-,r
+Vehicle.Diagnostics.Ignition.Load Demand versus RPM,Load Demand versus RPM.,string,-,r
+Vehicle.Diagnostics.Ignition.Number of Glow Cycles,Number of Glow Cycles.,string,-,r
+Vehicle.Diagnostics.Ignition.Number of Injection f Pressure,Number of Injection f Pressure.,string,-,r
+Vehicle.Diagnostics.Ignition.Overall Power of Glow Plugs versus Glow Plugs Glowing States,Overall Power of Glow Plugs versus Glow Plugs Glowing States.,string,-,r
+Vehicle.Diagnostics.OBD.AirStatus,An indication of the current status of the secondary air system used for pollution control.,string,-,r
+Vehicle.Diagnostics.OBD.CommandedEquivalenceRatio,The current commanded open loop equivalence ratio for fuel and air.,string,-,r
+Vehicle.Diagnostics.OBD.FuelInjectionPulseWidth,Fuel Injection Pulse Width.,string,-,r
+Vehicle.Diagnostics.OBD.FuelInjectionTiming,Fuel Injection Timing.,string,-,r
+Vehicle.Diagnostics.OBD.FuelRailPressureAbsolute,"The current absolute fuel rail pressure within the fuel rail of the high-pressure fuel pump, which is given into the injectors for direct injection.",string,-,r
+Vehicle.Diagnostics.OBD.FuelRailPressureDirect,The current relative fuel rail gauge pressure referenced to atmosphere within the fuel rail of the high-pressure fuel pump for direct injection.,string,-,r
+Vehicle.Diagnostics.OBD.FuelRailPressureVac,The current relative fuel rail pressure referenced to the manifold vacuum within the fuel rail of the high-pressure fuel pump for direct injection.,string,-,r
+Vehicle.Diagnostics.OBD.FuelStatus,The current status and possible problems with fuel system 1 and optionally fuel system 2.,string,-,r
+Vehicle.Diagnostics.OBD.InjectedFuelQuantity,The current amount of fuel injected into an engine cylinder for the most recent power stroke.,string,-,r
+Vehicle.Diagnostics.OBD.InjectionPressureControlSystem,Injection Pressure Control System.,string,-,r
+Vehicle.Diagnostics.OBD.IntakeTemp,Intake Air Temperature Sensor.,string,-,r
+Vehicle.Diagnostics.OBD.LongTermFuelTrim1,"The current measured percentual corrections for banks 1 and 2, averaged over several short-term fuel trim cycles, to maintain the proper fuel:air ratio.",string,-,r
+Vehicle.Diagnostics.OBD.LongTermO2Trim1,Long-Term Secondary Oxygen Sensor Trim.,string,-,r
+Vehicle.Diagnostics.OBD.MAF,Mass Air Flow Sensor.,string,-,r
+Vehicle.Diagnostics.OBD.MAP,The current measured value of the manifold vacuum by the air density and engine air mass flow rate.,string,-,r
+Vehicle.Diagnostics.OBD.MaxMAF,An indication of the maximum allowed value from the mass (air) flow sensor for the mass flow rate of air entering into the engine.,string,-,r
+Vehicle.Diagnostics.OBD.O2.Voltage,The current voltage generated by the oxygen sensor along with the current short-term fuel trim. Values provided separately for oxygen sensor 1 to 8.,number,,r
+Vehicle.Diagnostics.OBD.O2WR,"An indication of the presence of oxygen sensors 1 and 2 in banks 1 to 4, respectively.",string,-,r
+Vehicle.Diagnostics.OBD.O2WR.Sensor.Current,The current fuel-air equivalence ratio along with the milliamp current for the oxygen sensor. Values provided separately for oxygen sensor 1 to 8.,number,A,r
+Vehicle.Diagnostics.OBD.O2WR.Sensor.Voltage,The current fuel-air equivalence ratio along with the voltage generated by the oxygen sensor. Values provided separately for oxygen sensor 1 to 8.,number,V,r
+Vehicle.Diagnostics.OBD.ShortTermFuelTrim1,"The current measured immediate percentual corrections in fuel trim separately for banks 1 and 2, used for maintaining the proper fuel:air ratio.",string,-,r
+Vehicle.Diagnostics.OBD.ShortTermO2Trim1,Short-Term Secondary Oxygen Sensor Trim.,string,-,r
+Vehicle.Diagnostics.OBD.TimingAdvance,The required advance of firing a spark to prepare ignition in degrees before a piston reaches top dead center.,string,-,r
+Vehicle.Diagnostics.OBD2AUXInputOutput.IsSupported,An indication of the supported auxiliary hardware over the OBD-2 connector.,boolean,-,r
+Vehicle.Diagnostics.OBD2AUXInputOutput.Status,An indication of the auxiliary hardware's power status over the OBD-2 connector.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter,Diesel Particulate Filter.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter.CalculatedSootMass,Calculated Soot Mass in Diesel Particulate Filter.,number,g,r
+Vehicle.Diagnostics.ParticulateFilter.CloggingRisk,Diesel Particulate Filter clogging risk.,number,%,r
+Vehicle.Diagnostics.ParticulateFilter.DifferentialPressure,Differential Pressure in Diesel Particulate Filter.,number,kPa,r
+Vehicle.Diagnostics.ParticulateFilter.DistanceSinceRegenration,The current number of kilometers driven since a diesel particulate filter regeneration was last performed.,number,km,r
+Vehicle.Diagnostics.ParticulateFilter.DistanceToRegenration,The current remaining number of kilometers until a scheduled diesel particulate filter regeneration will be performed.,number,km,r
+Vehicle.Diagnostics.ParticulateFilter.DistanceToService,The current remaining number of kilometers until the next diesel particulate filter service should be performed.,number,km,r
+Vehicle.Diagnostics.ParticulateFilter.FuelConsumptionSinceRegeneration,Fuel Consumption since last Diesel Particulate Filter Regeneration.,number,l,r
+Vehicle.Diagnostics.ParticulateFilter.MeasuredSootMass,Measured Soot Mass in Diesel Particulate Filter.,number,g,r
+Vehicle.Diagnostics.ParticulateFilter.OilAshVolume,Oil Ash Volume in Diesel Particulate Filter.,number,,r
+Vehicle.Diagnostics.ParticulateFilter.ParticulateMatter,Particulate Matter Sensor.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter.RegeneratedAt,Time since last Diesel Particulate Filter Regeneration.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter.Regenerations,Number of Partial Diesel Particulate Filter Regenerations.,number,-,r
+Vehicle.Diagnostics.ParticulateFilter.RegenrationsRequested,The current number of active DPF regenerations commanded by the vehicle ECU.,number,-,r
+Vehicle.Diagnostics.ParticulateFilter.ResourceRemaining,The current remaining lifetime of the diesel particulate filter relative to its maximum intended filter capacity.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter.ServicesDone,Number of Diesel Particulate Filter Services Done.,number,-,r
+Vehicle.Diagnostics.ParticulateFilter.SuccesfullRegenerations,The current number of successfully completed active and passive DPF regenerations commanded by the vehicle ECU.,string,-,r
+Vehicle.Diagnostics.ParticulateFilter.Temperature,Diesel Particulate Filter Temperature.,number,C,r
+Vehicle.Diagnostics.TimeSinceDTCCleared,The current total continuous time elapsed since any Diagnostic Trouble Codes were cleared with a scan tool.,string,-,r
+Vehicle.Diagnostics.TimeWithDTC,The current total continuous time elapsed since a standardized diagnostic trouble code (DTC) was registered over threshold value by the onboard diagnostics system.,string,-,r
+Vehicle.Diagnostics.Transmission,Transmission Status.,string,-,r
+Vehicle.Diagnostics.Transmission.AcceleratorPositionE,"The current absolute position of the accelerator pedal for sensors D, E, and F.",number,%,r
+Vehicle.Diagnostics.Transmission.EcoModePeriod,The length of time ECO mode was activated during the most recent trip when data were recorded.,string,-,r
+Vehicle.Diagnostics.Transmission.EcoPlusModePeriod,The length of time ECO PLUS mode was activated during the most recent trip when data were recorded.,string,-,r
+Vehicle.Diagnostics.Transmission.NoiseVibrationHarshnessStatus,Noise Vibration Harshness Status.,string,-,r
+Vehicle.Diagnostics.Transmission.Pressure,Transmission Pressure.,number,kPa,r
+Vehicle.Diagnostics.Transmission.RelativeAcceleratorPosition,"The current relative position of the accelerator pedal, as learned based on the calculated voltage offset for the closed-throttle position.",number,%,r
+Vehicle.Diagnostics.Transmission.RelativeThrottlePosition,"The current relative position of the throttle, as related to or learned based on the calculated voltage offset for the closed-throttle position.",number,%,r
+Vehicle.Diagnostics.Transmission.Temperature,Transmission Temperature.,number,C,r
+Vehicle.Diagnostics.Transmission.Torque,Transmission Torque.,number,Nm,r
+Vehicle.Diagnostics.Trottle.Actuator,"The current status of the throttle, from commanded closed (0%) to commanded open (100%).",number,%,r
+Vehicle.Diagnostics.Trottle.Position,The current absolute position of the throttle for sensor A on the throttle plate.,number,%,r
+Vehicle.Diagnostics.Trottle.PositionB,The current absolute position of the throttle for sensor B on the throttle plate.,number,%,r
+Vehicle.Diagnostics.Trottle.PositionC,The current absolute position of the throttle for sensor C on the throttle plate.,number,%,r
+Vehicle.Diagnostics.Turbocharger.CoimpressorInletPressure,Turbocharger Compressor Inlet Pressure.,number,kPA,r
+Vehicle.Diagnostics.Turbocharger.RPM,Turbocharger RPM.,number,rpm,r
+Vehicle.Diagnostics.Turbocharger.Temperature,Turbocharger Temperature.,number,C,r
+Vehicle.Diagnostics.Turbocharger.VeriableGeometryTurboControl,Variable Geometry Turbo Control.,string,-,r
+Vehicle.Diagnostics.Turbocharger.WastegateControl,Wastegate Control.,string,-,r
+Vehicle.Diagnostics.WarmupsSinceDTCClear,The current number of engine warm-up cycles (coolant >22°C & engine >70°C / >60°C for diesel) since any Diagnostic Trouble Codes were cleared with a scan tool.,number,-,r
+Vehicle.DiagnosticsMilOnRequest,A request to turn on MIL.,boolean,-,r
+Vehicle.Driver.DrivingCoaching,Driver Coaching.,string,-,r
+Vehicle.Driver.ID,Driver ID.,string,-,r
+Vehicle.Driver.Stars.AccelerationBehavior,The current number of stars awarded to the acceleration behavior of the driver based on the driving style analysis.,number,-,r
+Vehicle.Driver.Stars.BrakingBehavior,The current number of stars awarded to the braking behavior of the driver based on the driving style analysis.,number,-,r
+Vehicle.Driver.Stars.ProactiveDrivingBehavior,The current number of stars awarded to the proactive driving behavior of the driver based on the driving style analysis.,number,-,r
+Vehicle.ECM.FaultSignal,Fault Signal of ECM.,string,-,r
+Vehicle.ECM.Voltage,"The current power input to the control module, typically a few tenths of a volt below the current battery voltage.",number,V,r
+Vehicle.ECU.CurrentTemperature,ECU Temperature at Current Level.,number,C,r
+Vehicle.ECU.HWVersion,Hardware Version of ECU.,string,-,r
+Vehicle.ECU.IdentificationNumber,ECU Identification Number.,string,-,r
+Vehicle.ECU.PartNumber,ECU Part Number.,string,-,r
+Vehicle.ECU.SoftwareVersion,Current Software Version of ECU.,string,-,r
+Vehicle.ECU.TemperatureRanges,ECU Operational Temperature Ranges & Damaging Temperature.,string,-,r
+Vehicle.ECU.TravelledDistance,ECU Driving Distance.,number,km,r
+Vehicle.ECU.Voltage,The current power input to ECU.,number,V,r
+Vehicle.Electric.ContractID,Electric Vehicle Contract ID.,string,-,rw
+Vehicle.Electric.Plug.IsConnected,An indication of whether or not the vehicle is currently connected to a charging plug.,boolean,-,r
+Vehicle.Electric.Plug.Type,Electric plug type.,string,-,r
+Vehicle.Electric.VehicleID,Electric Vehicle-Specific IDs for Mobility Service Provider.,string,-,r
+Vehicle.EmissionsCO2,The CO2 emissions in g/km.,number,g/km,r
+Vehicle.ExhaustFluid.Level,The current estimated exhaust fluid fill in litres.,number,l,r
+Vehicle.Engine.Configuration,"An indication of the type of engine and engine displacement in liters, as provided by the vehicle.",string,-,r
+Vehicle.Engine.Coolant.DistanceToService,The current remaining number of kilometers until the next coolant service should be performed.,number,km,r
+Vehicle.Engine.Coolant.Level,Coolant Level.,number,%,r
+Vehicle.Engine.Coolant.ResourceRemaining,The current remaining lifetime of the coolant relative to its maximum purity and composition integrity.,number,%,r
+Vehicle.Engine.Coolant.ServicesDone,The current cumulative number of coolant services performed on the vehicle.,number,-,r
+Vehicle.Engine.Coolant.Temperature,The current measured temperature of coolant in the engine at its current temperature.,number,C,r
+Vehicle.Engine.EngineLoad,Mechanical Load of the Engine.,number,,r
+Vehicle.Engine.IgnitionOn,"An indication of whether the ignition is currently on or off, or if the status is unknown.",boolean,-,r
+Vehicle.Engine.IsOn,"An indication of whether the engine is currently on or off, or whether this is unknown.",boolean,-,r
+Vehicle.Engine.MAP,Boost Pressure Control.,string,-,r
+Vehicle.Engine.MaxTorque,Engine Reference Torque.,number,Nm,r
+Vehicle.Engine.Oil.ChangeDue,Time until next Required Oil Change.,string,-,r
+Vehicle.Engine.Oil.DistanceToService,The current remaining number of kilometers until the next engine oil service should be performed.,string,-,r
+Vehicle.Engine.Oil.Level,The current estimated oil tank liquid fill.,number,%,r
+Vehicle.Engine.Oil.Pressure,Oil Pressure.,number,kPa,r
+Vehicle.Engine.Oil.ResourceRemaining,The current remaining lifetime of the engine oil relative to its maximum purity and composition integrity.,string,-,r
+Vehicle.Engine.Oil.ServicesDone,The current cumulative number of engine oil services performed on the vehicle.,number,-,r
+Vehicle.Engine.Oil.Temperature,Oil Temperature in Engine.,number,C,r
+Vehicle.Engine.RPM,The current speed of the engine in terms of the revolutions per minute the crank shaft rotates about its axis.,number,rpm,r
+Vehicle.Engine.Runtime,Time since Engine Start.,string,-,r
+Vehicle.Engine.Torque,The current percentual torque of the drive engine.,number,%,r
+Vehicle.Engine.TPS,Current throttle position.,number,%,r
+Vehicle.EVBattery.Age,The age of the drive battery by production date.,string,-,r
+Vehicle.EVBattery.Capacity,The current available electric vehicle battery capacity as a percentage of the minimum (0%) and maximum (100%) recommended battery range voltage.,number,%,r
+Vehicle.EVBattery.Charging.CurentType,An indication of the type of current (direct or alternating current) the vehicle was charged with and which charging plug was used for this purpose.,string,-,r
+Vehicle.EVBattery.Charging.Current,The charging power in A  for the most recent charging process when charging with alternating current.,number,A,r
+Vehicle.EVBattery.Charging.Plan,Electric Vehicle Charge Plan.,string,-,r
+Vehicle.EVBattery.Charging.Profile,The charging mode most recently selected for the vehicle.,string,-,r
+Vehicle.EVBattery.Charging.RemoteProfile,The charging profile of the vehicle that was configured remotely via app.,string,-,r
+Vehicle.EVBattery.Charging.Status,The current charging status of the vehicle(string),string,-,r
+Vehicle.EVBattery.Charging.TimeTillFullyCharged,An estimated value of the time needed till the battery is fully charged.,string,-,r
+Vehicle.EVBattery.Charging.Voltage,The charging voltage for the most recent charging process when charging with alternating current.,number,V,r
+Vehicle.EVBattery.Charging.Window,An indication of whether a pre-defined time window in which the high-voltage battery of the vehicle should be charged was chosen.,string,-,rw
+Vehicle.EVBattery.Consumption,The current consumption of electrical energy by the drive battery.,number,kWh,r
+Vehicle.EVBattery.Current,Battery Current.,number,A,r
+Vehicle.EVBattery.HealthStatus,An indication of the current battery health status.,boolean,-,r
+Vehicle.EVBattery.HVBattery.LastTripChargingStatus,The charging status of the high-voltage battery at the end of the most recent trip.,string,-,r
+Vehicle.EVBattery.LVBattery.ChargingStatus,The current charging status of the low-voltage battery in percent.,number,%,r
+Vehicle.EVBattery.NumberOfQuickCharges,Number of Quick Charges Performed.,number,-,r
+Vehicle.EVBattery.Range,The current calculated remaining range of the electric vehicle based on the current battery capacity and energy demand.,number,km,r
+Vehicle.EVBattery.SOC,The current percentual state of charge of the vehicle's drive battery relative to the battery's theoretical full charge at 100%.,number,%,r
+Vehicle.EVBattery.Temperature,Battery Temperature during Operation & Sleeping at Current Level.,number,C,r
+Vehicle.EVBattery.TimeDriven,Total Time Driven on Battery.,string,-,r
+Vehicle.EVBattery.TravelledDistance,The current number of kilometers driven since the battery was last charged.,number,km,r
+Vehicle.EVBattery.UseStatus,Battery Use Status.,string,-,r
+Vehicle.FuelSystem.AverageConsumption,Average Fuel Consumption.,number,l/km,r
+Vehicle.FuelSystem.DieselAdditive.DistanceToService,The current remaining number of kilometers until the next diesel additive service should be performed.,number,km,r
+Vehicle.FuelSystem.DieselAdditive.Level,Diesel Additive Level.,number,%,r
+Vehicle.FuelSystem.DieselAdditive.LowLevel,An indication of whether the diesel additive level running low and in need of a refill.,boolean,-,r
+Vehicle.FuelSystem.DieselAdditive.RemainingRange,The current calculated remaining range of the diesel additive fluid based on the current diesel additive level and demand.,string,-,r
+Vehicle.FuelSystem.DieselAdditive.ResourceRemaining,The current remaining lifetime of the diesel additive relative to its maximum purity and composition integrity.,string,-,r
+Vehicle.FuelSystem.DieselAdditive.ServicesDone,The current cumulative number of diesel additive services performed on the vehicle.,number,-,r
+Vehicle.FuelSystem.EngineStopStartEnabled,An indication of whenever engine start/stop is enabled for the vehicle.,boolean,-,r
+Vehicle.FuelSystem.ForecastedRange,An indication of the current calculated remaining range of the vehicle based on the remaining fuel and fuel demand.,number,km,r
+Vehicle.FuelSystem.Fuel.EthanolPercent,The current percentage of ethanol blended into the engine fuel.,number,%,r
+Vehicle.FuelSystem.Fuel.Level,The current estimated fuel tank liquid fill level based on the tank float.,number,%,r
+Vehicle.FuelSystem.Fuel.Quality,Fuel Quality.,string,-,r
+Vehicle.FuelSystem.Fuel.Type,An indication of the fuel type of the vehicle as provided by the vehicle.,string,-,r
+Vehicle.FuelSystem.FuelPressure,The current gauge pressure of engine fuel in the lift pump.,number,kPa,r
+Vehicle.FuelSystem.FuelRate,Instant Fuel Consumption.,number,ml^3/s,r
+Vehicle.FuelSystem.Range,The current remaining range of the fuel tank contents.,number,km,r
+Vehicle.FuelSystem.Tank.Temperature,Temperature of the fuel tank.,number,C,r
+Vehicle.EVBattery.ResourceRemaining,The current remaining lifetime of the high voltage battery relative to its maximum intended charge capacity.,number,%,r
+Vehicle.Immobilezer.Status,An indication of the current lock status of the alcohol lock.,string,-,r
+Vehicle.IsMoving,An indication of whether the vehicle was in motion at the time of data collection.,boolean,-,r
+Vehicle.Maintenance.AverageWeeklyDistance,Average distance travelled per week oevr last two months.,number,km,r
+Vehicle.Maintenance.Check.DueDate,An indication of the point in time the driver receives a message informing that the vehicle will soon be due for a service.,string,-,r
+Vehicle.Maintenance.Check.History.Size,An indication of the cumulative numbers of vehicle checks performed on the vehicle.,number,-,r
+Vehicle.Maintenance.Inspection.CheckIndicator,An indication of whether a planned inspection for the vehicle is due.,boolean,-,r
+Vehicle.Maintenance.Inspection.DueDate,The current remaining months before the next inspection.,string,-,r
+Vehicle.Maintenance.Inspection.DueDistance,The current remaining number of kilometers until the next planned inspection should be performed.,number,km,r
+Vehicle.Maintenance.Service.AdvisorNotificationDate,Indicates when serviuce advisor will be notified about next vehicle service.,string,-,r
+Vehicle.Maintenance.Service.ConditionBasedServices,Condition Based Services.,string,-,r
+Vehicle.Maintenance.Service.ConditionBasedServicesCount,Condition Based Services Count.,number,-,r
+Vehicle.Maintenance.Service.DistanceFrom,The current number of kilometers driven since the previous maintenance service was performed.,number,km,r
+Vehicle.Maintenance.Service.DueDate,The current remaining time before the next planned maintenance service.,string,-,r
+Vehicle.Maintenance.Service.DueDistance,The current remaining number of kilometers until the next planned maintenance service should be performed.,number,km,r
+Vehicle.Maintenance.Service.History,The current status of maintenance services performed at a particular date.,string,-,r
+Vehicle.Maintenance.Service.Indicator,An indication of the vehicle soon being due for a service based on the odometer value.,boolean,-,r
+Vehicle.Maintenance.Service.Indicator.DistanceThreshhold,The threshold value stored in the vehicle that determines from how many kilometers before a service is due the driver is first notified.,number,km,r
+Vehicle.Maintenance.Service.Indicator.TimeThreshhold,The threshold value stored in the vehicle that determines from how many weeks before a service is due the driver is first notified.,string,-,r
+Vehicle.Maintenance.Service.Pending.Size,The current number of important condition-based service reports and pending service appointments.,number,n,r
+Vehicle.Maintenance.Service.TimeFrom,The current amount of time passed since the last maintenance service was performed.,string,-,r
+Vehicle.Maintenance.Service.Type,An indication of the required type of maintenance service according to a maintenance code provided.,string,-,r
+Vehicle.Maintenance.SparkPlug.DistanceToService,The current remaining number of kilometers until the spark plugs service should be performed.,number,km,r
+Vehicle.Maintenance.SparkPlug.ServicesDone,The current cumulative number of spark plug services performed on the vehicle.,number,-,r
+Vehicle.Maintenance.WeeklyDistance,Average distance travelled per week.,number,km,r
+Vehicle.Maintenance.WorkshopVisit.Date,The time of a workshop visit or the start of a diagnostic session.,string,-,r
+Vehicle.Measures.SpeedAccuracy,The accuracy estimation of the current vehicle speed based on the coherence of the sensoric data used.,string,-,r
+Vehicle.Mileage,The current total lifetime mileage of the vehicle as tracked by the vehicle.,number,km,r
+Vehicle.MobilePhoneConnected,"An indication of whether a mobile phone is or is not linked to the vehicle, or whether the connection status is unknown.",boolean,-,r
+Vehicle.OBD.PidsC,"An indication of which OBD PIDs are supported by the vehicle over the OBD-2 protocol, provided as separate data items for 20 PIDs per data item.",string,-,r
+Vehicle.Position,The current GPS position of the vehicle.,string,-,r
+Vehicle.Position.Accuracy,The accuracy estimation of the current GPS location values based on the availability of satellite information.,string,-,r
+Vehicle.Position.Altitude,The current height of the vehicle above sea-level.,number,m,r
+Vehicle.Position.Heading,The current orientation of the vehicle in radial degrees.,number,rad,r
+Vehicle.Position.Latitude,The current vehicle latitude.,number,degrees,r
+Vehicle.Position.Longitude,The current vehicle longitude.,number,degrees,r
+Vehicle.Speed,The current speed in km/h measured by the vehicle speed sensor at which the vehicle is currently moving.,number,km/h,r
+Vehicle.StillTime,The time of vehicle standing w/o movements.,string,-,r
+Vehicle.Surroundings.AirTemperature,The current measured temperature outside the vehicle as measured by the air temperature sensor.,number,C,r
+Vehicle.Surroundings.AirHumidity,The current measured humidity outside the vehicle as measured by the air humidity sensor.,number,g/m^3,r
+Vehicle.Surroundings.Luminosity,The current measured luminosity outside the vehicle as measured by the luminosity sensor.,number,joule/s,r
+Vehicle.Surroundings.BarometricPressure,"The current barometric pressure measured, not adjusted to sea level.",number,kPa,r
+Vehicle.Surroundings.DrivingSurface,The current measured condition of the driving surface as influenced by surface smoothness.,string,-,r
+Vehicle.Surroundings.Offroad,"The flag, indicating off the road status.",boolean,-,r
+Vehicle.Surroundings.EnvironmentConditions,The current environmental conditions as registered by the environmental sensors in the vehicle.,string,-,r
+Vehicle.Surroundings.Pictures,The stored images from onboard cameras.,string,-,r
+Vehicle.Surroundings.Slope,The current forward upward or downward orientation of the vehicle in radial degrees.,number,rad,r
+Vehicle.Surroundings.Slope90,The current sideways tilt orientation of the vehicle to the left or to the right in radial degrees.,number,rad,r
+Vehicle.Surroundings.TrafficLights,The currently detected traffic lights and the light signal currently transmitted by them.,string,-,r
+Vehicle.Surroundings.TrafficSigns,The currently detected traffic signs in the vehicle's surroundings and their meaning.,string,-,r
+Vehicle.PrivacyMode.Status,Privacy mode status.,boolean,-,r
+Vehicle.Teleservice.ACN,Automatic Crash Notification.,string,-,r
+Vehicle.Teleservice.Event.AutomaticServiceCall,Service call event.,string,-,r
+Vehicle.Teleservice.Event.BatteryGuardCall,Batter guard call event.,string,-,r
+Vehicle.Teleservice.Event.ManualServiceCall,Manual service call event.,string,-,r
+Vehicle.Teleservice.Event.Position,Position update event.,string,-,r
+Vehicle.Teleservice.IsSupported,Status of teleservice for the vehicle.,boolean,-,r
+Vehicle.Transmission.DrivetrainMode,"DrivetrainMode (4WD, FWD, RWD)",string,-,r
+Vehicle.Transmission.ActivatedMode,"Activated mode of of the transmission, such as ECO, ECO PLUS, SPORT.",string,-,r
+Vehicle.Transmission.Gear,Currently selected gear.,string,-,r
+Vehicle.Transmission.Oil.Level,Transmission oil level.,number,,r
+Vehicle.Transmission.GearRatios,Gear transmission ratios.,string,-,r
+Vehicle.Transmission.Type,Transmission type.,string,-,r
+Vehicle.Trip.AverageSpeed,The current average speed in km/h at which the vehicle is moving during the current trip.,number,km/h,r
+Vehicle.Trip.DistanceDriven,The current length of the trip in kilometers.,number,km,r
+Vehicle.Trip.DrivingTime,The current length of the trip in time.,string,-,r
+Vehicle.Trip.ElectricallyDriven,The share of the most recent trip's distance covered with electrical energy.,number,%,r
+Vehicle.Trip.ElectricityConsumption,The total energy consumption during the most recent trip.,number,kWh,r
+Vehicle.Trip.ElectricityConsumptionComfortMode,The current electrical energy consumption in COMFORT mode during the most recent trip.,number,kWh,r
+Vehicle.Trip.EnetrgyRecuperated,The electrical energy recuperated during the most recent trip.,number,kWh,r
+Vehicle.Trip.FuelConsumption,The cumulative fuel consumption for the trip.,number,l,r
+Vehicle.Trip.ID,The  trip ID as reported by the vehicle.,string,-,r
+Vehicle.Trip.IdleTime,Idle time of the trip in format hh:mm:ss.,string,-,r
+Vehicle.Trip.TripEnd.HVsoc,The state of HV battery at the end of the trip.,string,-,r
+Vehicle.Trip.TripEnd.Mileage,The odometer value at the end of a trip.,number,km,r
+Vehicle.Trip.TripEnd.Position,The location of the vehicle and the time at the end of a trip with a specific trip number.,string,-,r
+Vehicle.Trip.TripEnd.Timestamp,The time at the end of a trip with a specific trip number.,string,-,r
+Vehicle.Trip.TripStart.Mileage,The odometer value at the start of a trip.,number,km,r
+Vehicle.Trip.TripStart.Position,The location of the vehicle and the time at the beginning of a trip with a specific trip number.,string,-,r
+Vehicle.Trip.TripStart.Timestamp,The time at the beginning of a trip with a specific trip number.,string,-,r
+Vehicle.VehicleIdentification.BodyType,Vehicle model.,string,-,r
+Vehicle.VehicleIdentification.Brand,"An indication of the original equipment manufacturer of the vehicle, as provided by the vehicle.",string,-,r
+Vehicle.VehicleIdentification.Model,Vehicle manufacturer/OEM.,string,-,r
+Vehicle.VehicleIdentification.ProductionDate,"The date the vehicle passed the inspection after production, as provided by the vehicle.",string,-,r
+Vehicle.VehicleIdentification.Registration.Country,"An indication of the country in which the vehicle is currently registered, as provided by the vehicle.",string,-,r
+Vehicle.VehicleIdentification.Registration.First,The date of first registration.,string,-,r
+Vehicle.VehicleIdentification.SeatingCapacity,Vehcile seating capacity.,string,-,r
+Vehicle.VehicleIdentification.VehicleConfiguration,The manufacturer-specific identification code of the vehicle-specific combination of features as stored in the vehicle.,string,-,r
+Vehicle.VehicleIdentification.VehicleSoftware,The current firmware or software version of a component as stored in the vehicle.,string,-,r
+Vehicle.VehicleIdentification.VIN,Vehcile identification number.,string,-,r
