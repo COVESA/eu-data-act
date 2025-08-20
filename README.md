@@ -105,6 +105,14 @@ to VSS builds upon the work on [Issue
 #180](https://github.com/COVESA/vehicle_signal_specification/issues/180)
 in the COVESA `vehicle_signal_specification` GitHub repository.
 
+### CLEPA Section A Data Item List
+
+The CLEPA (European Association of Automotive Suppliers) Section A
+Data Item List consists of 529 data points for third-party use
+cases. The list has previously been submitted to the Commission’s
+Motor Vehicle Working Group (MVWG). It is intended as an initial
+summary of the most relevant data points.
+
 ### Essential Fleet Signals
 
 This is a condensed version of the COVESA Commercial Vehicle Expert
